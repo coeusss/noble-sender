@@ -14,6 +14,7 @@ INTERVAL_MAX = 75
 RECEIPIENT = ""
 BINARY_PATH = r""
 USER_PROFILE_PATH = r""
+DRIVER_PATH = r""
 
 class Purchaser:
     
@@ -44,7 +45,7 @@ class Purchaser:
         }
         }
 
-        driver = webdriver.Chrome(r"C:\Users\ball\Downloads\chromedriver.exe", options = option, seleniumwire_options = proxyOptions if proxyOptions['https'] != None else None)
+        driver = webdriver.Chrome(DRIVER_PATH, options = option, seleniumwire_options = proxyOptions if proxyOptions['https'] != None else None)
         
         stealth(driver,
                 languages = ["en-US", "en"],
